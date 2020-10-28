@@ -49,7 +49,8 @@ export default {
       this.habiPoke = resultado.data.abilities;
       this.movPoke = resultado.data.moves;
       this.imgPoke = resultado.data.sprites;
-    });
+    })
+    .catch(error=>console.error(error));
     this.nombre_pokemon = "";
     }
   },
@@ -60,7 +61,8 @@ export default {
       this.habiPoke = resultado.data.abilities;
       this.movPoke = resultado.data.moves;
       this.imgPoke = resultado.data.sprites;
-    });
+    })
+    .catch(error=>console.error(error));
   },
 }
 
