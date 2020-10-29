@@ -6,7 +6,7 @@
       <input type="text" v-model="nombre_pokemon">
       <button type="submit" class="btn btn-success ml-2">Buscar</button>
     </form>
-    <img :src="imgPoke.front_default" :alt="this.namePoke">
+    <img :src="imagenPoke" :alt="this.namePoke">
     <h2>Nombre pokemón: {{namePoke}}</h2>
     <div>
       <h3>Habilidades:</h3>
@@ -52,6 +52,11 @@ export default {
     })
     .catch(error=>console.error(error));
     this.nombre_pokemon = "";
+    }
+  },
+  computed: {
+    imagenPoke(){
+      return this.imgPoke.front_default;
     }
   },
   created() {
